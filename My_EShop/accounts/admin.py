@@ -16,7 +16,8 @@ class EShopUserAdmin(auth_admin.UserAdmin):
 
     group.short_description = 'Groups'
 
-    list_display = ['email', 'date_joined', 'last_login', 'is_staff', 'is_superuser', 'group']
+    list_display = ['email', 'date_joined', 'last_login', 'is_staff', 'is_superuser',
+                    'group', 'first_name', 'last_name']
     list_filter = ()
     search_fields = ('email',)
     # add_form = RegisterUserForm
@@ -27,14 +28,7 @@ class EShopUserAdmin(auth_admin.UserAdmin):
             'LogIn info',
             {
                 "classes": ("wide",),
-                "fields": ("email", "password1", "password2"),
-            },
-        ),
-        (
-            'Profile info',
-            {
-                "classes": ("wide",),
-                "fields": ("first_name", "last_name", "profile_image"),
+                "fields": ("email", "password1", "password2", "first_name", "last_name"),
             },
         ),
     )
@@ -45,7 +39,10 @@ class EShopUserAdmin(auth_admin.UserAdmin):
          {
              'fields': (
                  'email',
-                 'password')}),
+                 'password',
+                 "first_name",
+                 "last_name",
+             )}),
         (
             'Permissions',
             {
