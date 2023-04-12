@@ -1,0 +1,63 @@
+{% load static %}
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+    <div class="container">
+        <a href="{% url 'index' %}"><img src="{% static 'images/logo4.jpg' %}" alt="logo" width="170" height="80"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span><i id="bar" class="fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            {% if request.user.is_authenticated %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <a href="{% url 'user details' pk=request.user.pk %}"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                    <a href="{% url 'logout user' %}">Sign out</a>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </li>
+
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <a href="{% url 'login user' %}"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </li>
+
+            {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

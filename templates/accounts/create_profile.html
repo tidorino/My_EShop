@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block page_content %}
+
+    <section id="log" class="w-100">
+        <div class="row">
+            <div class="details">
+                <form method="post" action="{% url 'register user' %}">
+
+                    <h2 class="form-title m-5 pt-5">Create a new account</h2>
+                    <p>* Required Information</p>
+                    {% crispy form %}
+                    <div class="container text-center">
+                        <h5>* When you create an account, you agree to ....<br>
+                            Terms of Use and acknowledge you have read its Privacy Policy.</h5>
+
+                        <button type="submit" class="register">Create an account</button>
+                    </div>
+
+                    {% csrf_token %}
+
+                    <h5><br>Have an account? <a href="{% url 'login user' %}" style="color: #0292b7">Sign in</a></h5>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <section id="top-sellers" class="my-5">
+        <div class="container text-center mt-5 py-3">
+
+            <hr class="mx-auto">
+            <p></p>
+        </div>
+    </section>
+
+{% endblock %}

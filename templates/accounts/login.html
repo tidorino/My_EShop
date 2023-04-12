@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+
+{% load static %}
+{% block page_content %}
+
+    {#    <section id="log" class="w-100">#}
+    <div class="account-page ">
+        <div class="container">
+            <div class="row row-cols-2 mt-5 pt-5 " >
+                <div >
+                    <img src="{% static 'images/Mammut_Blog_Image.jpg' %}" class="rounded float-start" alt="">
+                </div>
+                <div class="grid text-center mt-5">
+                    <div class="col-2 g-start-2 ml-4">
+                        <form class="form-container" method="post" action="{% url 'login user' %}">
+
+                            <div class="details">
+                                <h2 class="form-title">Sign In</h2>
+                                {% crispy form %}
+                                <button class="text-uppercase">Sign in</button>
+                                {% csrf_token %}
+
+                                <h5><br>Don't have account? <a href="{% url 'register user' %}"
+                                                           style="color: #0292b7">Register</a>
+                                </h5>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link to Register Page-->
+
+    </div>
+    {#    </section>#}
+
+{% endblock %}

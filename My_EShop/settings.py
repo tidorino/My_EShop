@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
     'My_EShop.accounts',
     'My_EShop.eshop',
+
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +142,7 @@ AUTH_USER_MODEL = 'accounts.EShopUser'
 
 LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('index')
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
