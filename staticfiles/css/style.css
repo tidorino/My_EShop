@@ -113,12 +113,20 @@ hr {
     color: #fff;
 }
 
+/*.dropdown .dropdown-menu {*/
+/*    display: none;*/
+/*}*/
+/*.dropdown:hover >.dropdown-menu {*/
+/*    display: block;*/
+/*    margin-top: .125rem;*/
+/*}*/
+
 @media only screen and (max-width: 991px){
     body > nav > div > button:hover,
     body > nav > div > button:focus {
         background-color: #0292b7;
     }
-
+    product,
     #navbarSupportedContent > ul {
         margin: 1rem;
         justify-content: flex-end;
@@ -130,12 +138,16 @@ hr {
         padding: 10px 0;
     }
 }
+.navbar-item ul li:hover > ul {
+    display: block;
+}
 
 /*Mobile Nav*/
 .navbar-light .navbar-toggler {
     border: none;
     outline: none;
 }
+
 
 #home {
     background-image: url("https://images.squarespace-cdn.com/content/v1/5b2917eaaf209608f4e3bab5/1559660041934-AXY77IJX4CYA32RGUBBP/FATMAP_Mammut_Blog_Image.jpg?format=750w");
@@ -270,6 +282,9 @@ hr {
 #banner button {
     background-color: #2a2a2a;
 }
+#banner button:hover {
+    background-color: #3a3833;
+}
 
 footer {
     background-color: #222222;
@@ -361,3 +376,296 @@ footer .copyright a:hover {
     margin: auto;
     /*box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);*/
 }
+
+/********** Brand_slide ***********/
+
+.product1 {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+.product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+.product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 100%;
+    margin-right: 40px;
+}
+.product-image {
+    position: relative;
+    width: 70%;
+    height: 30%;
+    overflow: hidden;
+}
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+.product-card:hover .card-btn {
+    opacity: 1;
+}
+.card-btn:hover {
+    background: #3a3833;
+    color: aliceblue;
+}
+.product-info {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+.product-brand {
+    text-transform: uppercase;
+}
+.product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 4vw;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%);
+    cursor: pointer;
+    z-index: 9;
+}
+.pre-btn {
+    left: 0;
+    transform: rotate(0deg);
+}
+.nxt-btn {
+    right: 0;
+}
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.2;
+}
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+
+/********** new_slide_section *********/
+
+.new_product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+.new_product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+.new_product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.new_product-container::-webkit-scrollbar {
+    display: none;
+}
+.new_product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+.new_product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.new_product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #009688;
+    right: 10px;
+    top: 10px;
+}
+.new_card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    /*background: #fff;*/
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+.new_product-card:hover .new_card-btn {
+    opacity: 1;
+}
+.new_card-btn:hover {
+    background: #3a3833;
+    color: aliceblue;
+}
+.new_product-info {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+.new_product-brand {
+    text-transform: uppercase;
+}
+.new_product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+.price {
+    font-weight: 700;
+    font-size: 15px;
+}
+.actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 15px;
+}
+.pred-btn,
+.next-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 9;
+}
+.pred-btn {
+    left: 0;
+    transform: rotate(180deg);
+    background-color: #ffffff;
+}
+.next-btn {
+    right: 0;
+    background-color: #fff;
+}
+.pred-btn img,
+.next-btn img {
+    opacity: 0.2;
+}
+.pred-btn:hover img,
+.next-btn:hover img {
+    opacity: 1;
+}
+.collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.collection {
+    position: relative;
+}
+.collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
+
+/************* Dropdown Mega MEnu ***************/
+.menu-area {
+    position: static;
+}
+.mega-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    position: absolute;
+}
+.mega-menu a {
+    text-decoration: none;
+    color: #3a3833;
+}
+.mega-menu .sub-menu-heading {
+    color: #3a3833;
+}
+

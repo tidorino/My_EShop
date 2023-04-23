@@ -10,53 +10,413 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-            {% if request.user.is_authenticated %}
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Men</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <a href="{% url 'user details' pk=request.user.pk %}"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-                    <a href="{% url 'logout user' %}">Sign out</a>
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </li>
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
 
-            {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <a href="{% url 'login user' %}"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </li>
+                            </div>
+{#                            <li>#}
+{#                                <a class="dropdown-item" href="#">Blog</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a class="dropdown-item" href="#">Blog</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <hr class="dropdown-divider">#}
+{#                            </li>#}
+{#                            <li><a class="dropdown-item" href="#">Something else here</a></li>#}
 
-            {% endif %}
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Women</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
+
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Equipment</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
+
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false"
+                        >
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">My Account</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">My Orders</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider"/>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'logout user' %}">Sign out</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                {% else %}
+
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Men</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
+
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+
+                            </div>
+{#                            <li>#}
+{#                                <a class="dropdown-item" href="#">Blog</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a class="dropdown-item" href="#">Blog</a>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <hr class="dropdown-divider">#}
+{#                            </li>#}
+{#                            <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Women</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
+
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown menu-area">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                        >Equipment</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                            <div class="row ">
+                                <div class="col-sm-6 col-lg-3">
+                                    <img class="img-fluid" src="{% static 'images/brand_logos/mammut-logo-sw.png' %}"
+                                         alt="">
+
+                                    <h5>Mammut Products</h5>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <h5><strong class="sub-menu-heading">Mammut Equipment</strong></h5>
+                                    <p style="font-size: small"><a href="#">Climbing Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Avalanche Equipment</a></p>
+                                    <p style="font-size: small"><a href="#">Backpacks & Bags</a></p>
+                                    <p style="font-size: small"><a href="#">Sleeping Bags</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{% url 'login user' %}">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </li>
+
+                {% endif %}
             </ul>
         </div>
     </div>

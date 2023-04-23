@@ -21,14 +21,14 @@
                 </div>
             </div>
             <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="{% static 'images/vendor_arcteryx.jpg' %}" alt="">
+                <img class="img-fluid" src="{% static 'images/products/vendor_arcteryx.jpg' %}" alt="">
                 <div class="details">
                     <h2>Overnighting in the Alpine </h2>
                     <button class="text-uppercase">Shop now</button>
                 </div>
             </div>
             <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="{% static 'images/vendor_blackdiamond.jpg' %}" alt="">
+                <img class="img-fluid" src="{% static 'images/products/vendor_blackdiamond.jpg' %}" alt="">
                 <div class="details">
                     <h2>Spring Rising - New arrivals</h2>
                     <button class="text-uppercase">Shop Women's</button>
@@ -39,66 +39,98 @@
     </section>
 
     <section id="featured" class="my-5 pb-5">
-        <div class="container text-center mt-5 py-3">
-            <h3>New products</h3>
+        <div class="new_product mt-5 py-2">
+            <h3 class="product-category "></h3>
+            <h3 class="text-center">New Products</h3>
             <hr class="mx-auto">
-            <p>Here you can check out our new products.</p>
+            <p class="text-center">Here you can check out our new products.</p>
+
+            <button1 class="pred-btn"><img src="{% static 'images/arrow.png' %}" alt=""></button1>
+            <button1 class="next-btn"><img src="{% static 'images/arrow.png' %}" alt=""></button1>
+            <div class="new_product-container">
+
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
+                    <h4 class="price">Eur 99.80</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/patagonia-shoulder-bag.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">PATAGONIA-Ultralight Black Hole Tote Pack - Shoulder bag</h5>
+                    <h4 class="price">Eur 89.00</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/climbing-helmet.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">MAMMUT-Skywalker 3.0 Helmet </h5>
+                    <h4 class="price">Eur 59.95</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/avalanche-airbag.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">MAMMUT-Women's Tour 30 Removable Airbag 3.0 - Avalanche airbag</h5>
+                    <h4 class="price">Eur 659.80</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
+                    <h4 class="price">Eur 99.80</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
+                    <!-- icon - star-->
+                    <div class="star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
+                    <h4 class="price">Eur 99.80</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
         </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/mammut-rope.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
-                <h4 class="p-price">Eur 99.80</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/patagonia-shoulder-bag.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">PATAGONIA-Ultralight Black Hole Tote Pack - Shoulder bag</h5>
-                <h4 class="p-price">Eur 89.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/climbing-helmet.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">MAMMUT-Skywalker 3.0 Helmet </h5>
-                <h4 class="p-price">Eur 59.95</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/avalanche-airbag.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">MAMMUT-Women's Tour 30 Removable Airbag 3.0 - Avalanche airbag</h5>
-                <h4 class="p-price">Eur 659.80</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
+
     </section>
 
     <section id="banner" class="my-5 py-5">
@@ -110,78 +142,7 @@
         </div>
     </section>
 
-    <section id="top-sellers" class="my-5">
-        <div class="container text-center mt-5 py-3">
-            <h3>Top Sellers</h3>
-            <hr class="mx-auto">
-            <p>Here you can check out our new products.</p>
-        </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/mammut-rope.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
-                <h4 class="p-price">Eur 99.80</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/patagonia-shoulder-bag.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">PATAGONIA-Ultralight Black Hole Tote Pack - Shoulder bag</h5>
-                <h4 class="p-price">Eur 89.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/climbing-helmet.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">MAMMUT-Skywalker 3.0 Helmet </h5>
-                <h4 class="p-price">Eur 59.95</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="{% static 'images/avalanche-airbag.jpg' %}" alt="">
-                <!-- icon - star-->
-                <div class="star">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <h5 class="p-name">MAMMUT-Women's Tour 30 Removable Airbag 3.0 - Avalanche airbag</h5>
-                <h4 class="p-price">Eur 659.80</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-    </section>
+    {% include 'sections/new_slide_section.html' %}
 
-
-    <section id="brand" class="container">
-        <div class="row m-0 py-5">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/mammut-logo-sw.png' %}" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/patagonia-logo.png' %}" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/arcteryx-logo.png' %}" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/hagloefs-logo.png' %}" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/petzl-logo(1).png' %}" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="{% static 'images/prana-logo.png' %}" alt="">
-        </div>
-    </section>
+    {% include 'sections/brand_slide.html' %}
 {% endblock %}
