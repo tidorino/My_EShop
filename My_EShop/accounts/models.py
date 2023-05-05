@@ -54,4 +54,11 @@ class EShopUser(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         return f'{self.first_name} {self.last_name}'
 
 
+# class Customer(models.Model):
+#     pass
+    # user = models.OneToOneField(EShopUser, on_delete=models.CASCADE)
+    # profile_pic = models.ImageField(upload_to='profile_pic/CustomerProfilePic/', null=True, blank=True)
+    # address = models.CharField(max_length=40)
+    # mobile = models.CharField(max_length=20, null=False)
+
 

@@ -72,14 +72,14 @@ hr {
 }
 
 .navbar {
-    font-size: 16px;
+    font-size: 14px;
     top: 0;
     left: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    padding: 0 20px;
+    padding: 0 15px;
     color: black;
     transition: 0.3s ease;
 }
@@ -113,14 +113,6 @@ hr {
     color: #fff;
 }
 
-/*.dropdown .dropdown-menu {*/
-/*    display: none;*/
-/*}*/
-/*.dropdown:hover >.dropdown-menu {*/
-/*    display: block;*/
-/*    margin-top: .125rem;*/
-/*}*/
-
 @media only screen and (max-width: 991px){
     body > nav > div > button:hover,
     body > nav > div > button:focus {
@@ -148,6 +140,22 @@ hr {
     outline: none;
 }
 
+/*second nav bar*/
+#second-nav-bar {
+    width: 100%;
+    top: 13%;
+    position: fixed;
+    z-index: 1;
+
+    background-color: #ffffff;
+}
+#second-nav-bar .nav-item {
+    margin-left: 10px;
+    font-size: 15px;
+}
+#node {
+    direction: ltr;
+}
 
 #home {
     background-image: url("https://images.squarespace-cdn.com/content/v1/5b2917eaaf209608f4e3bab5/1559660041934-AXY77IJX4CYA32RGUBBP/FATMAP_Mammut_Blog_Image.jpg?format=750w");
