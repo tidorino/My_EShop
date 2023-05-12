@@ -1,9 +1,11 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.text import slugify
-from mptt.fields import TreeForeignKey
+from mptt.fields import TreeForeignKey, TreeManyToManyField
 from mptt.models import MPTTModel
 
 from My_EShop.core.validators import validate_max_image_size
+from My_EShop.eshop.managers import ProductManager
 
 
 class Brand(models.Model):
@@ -35,7 +37,7 @@ class Category(MPTTModel):
     )
 
     # null=False, blank=True, if we don't write slug ,automatically to be 'null' and 'save'
-    slug = models.SlugField(
+    category_slug = models.SlugField(
         max_length=SLUG_MAX_LEN,
         unique=True,
         null=False,
@@ -58,6 +60,9 @@ class Category(MPTTModel):
         ),
     )
 
+    # this is used if create a category which is not active yet
+    is_active = models.BooleanField(default=True)
+
     class MPTTMeta:
         order_insertion_by = ['title']
 
@@ -68,8 +73,10 @@ class Category(MPTTModel):
         # create/update
         super().save(*args, **kwargs)
 
-        if not self.slug:
-            self.slug = slugify(f'{self.title}')
+        if not self.category_slug:
+            if self.parent:
+                self.category_slug = slugify(f'{self.parent}/{self.title}')
+            self.category_slug = slugify(f'{self.title}')
 
         # update
         return super().save(*args, **kwargs)
@@ -78,29 +85,41 @@ class Category(MPTTModel):
     # def get_all_categories():
     #     return Category.objects.all()
 
+    def get_absolute_url(self):
+        return reverse('category list', kwargs={'slug': self.category_slug}) #args=[str(self.slug)]
+
     def __str__(self):
-        full_path = [self.title]
-        sub_cat = self.parent
-        while sub_cat is not None:
-            full_path.append(sub_cat.title)
-            sub_cat = sub_cat.parent
-        return ' / '.join(full_path[::-1])
+        return self.title
+        # full_path = [self.title]
+        # sub_cat = self.parent
+        # while sub_cat is not None:
+        #     full_path.append(sub_cat.name)
+        #     sub_cat = sub_cat.parent
+        # return ' / '.join(full_path[::-1])
 
 
 class Product(models.Model):
     PRODUCT_NAME_MAX_LEN = 150
     PRODUCT_DESCRIPTION_MAX_LEN = 400
+    SLUG_MAX_LEN = 50
 
     name = models.CharField(
         max_length=PRODUCT_NAME_MAX_LEN,
     )
-    category = models.ForeignKey(
-        Category,
-        on_delete=models.CASCADE,
-        default=1,
+
+    category = TreeManyToManyField(Category)
+    product_slug = models.SlugField(
+        max_length=SLUG_MAX_LEN,
+        unique=True,
+        null=False,
+        blank=True,
     )
 
     price = models.PositiveIntegerField(default=0)
+
+    # TODO:
+    # price = models.DecimalField(max_digits=4, decimal_places=2)
+
     discounted_price = models.PositiveIntegerField(
         null=True,
         blank=True,
@@ -124,11 +143,33 @@ class Product(models.Model):
     )
 
     create_at = models.DateTimeField(auto_now_add=True)
+
+    # TODO: who add products ?
+    # created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_creator')
+
     update_at = models.DateTimeField(auto_now=True)
 
     in_stock = models.BooleanField(default=True)
 
     is_featured = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
+    objects = models.Manager()
+    products = ProductManager()
+
+    class Meta:
+        ordering = ('-create_at',)
+
+    # TODO: check if works correct
+    def get_absolute_url(self):
+        return reverse('product detail', args=[self.pk])
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        if not self.product_slug:
+            self.product_slug = slugify(f'{self.name}')
+
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name

@@ -48,86 +48,24 @@
             <button1 class="pred-btn"><img src="{% static 'images/arrow.png' %}" alt=""></button1>
             <button1 class="next-btn"><img src="{% static 'images/arrow.png' %}" alt=""></button1>
             <div class="new_product-container">
+                {% for product in products %}
 
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="product text-center col-lg-3 col-md-4 col-12">
+                        <img class="img-fluid mb-3" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <!-- icon - star-->
+                        <div class="star">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="p-name">{{ product.brand }}</h4>
+                        <h5 class="p-name">{{ product.name }}</h5>
+                        <h6 class="price">Eur {{ product.price }}</h6>
+                        <button class="buy-btn">Buy Now</button>
                     </div>
-                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
-                    <h4 class="price">Eur 99.80</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/patagonia-shoulder-bag.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="p-name">PATAGONIA-Ultralight Black Hole Tote Pack - Shoulder bag</h5>
-                    <h4 class="price">Eur 89.00</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/climbing-helmet.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="p-name">MAMMUT-Skywalker 3.0 Helmet </h5>
-                    <h4 class="price">Eur 59.95</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/avalanche-airbag.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="p-name">MAMMUT-Women's Tour 30 Removable Airbag 3.0 - Avalanche airbag</h5>
-                    <h4 class="price">Eur 659.80</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
-                    <h4 class="price">Eur 99.80</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-                <div class="product text-center col-lg-3 col-md-4 col-12">
-                    <img class="img-fluid mb-3" src="{% static 'images/products/mammut-rope.jpg' %}" alt="">
-                    <!-- icon - star-->
-                    <div class="star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="p-name">8.7 Alpine Sender Dry Rope</h5>
-                    <h4 class="price">Eur 99.80</h4>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
+
+                {% endfor %}
             </div>
         </div>
 

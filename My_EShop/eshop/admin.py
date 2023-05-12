@@ -1,5 +1,9 @@
 from django.contrib import admin
+
+from django import forms
+from django.forms import CheckboxSelectMultiple
 from mptt.admin import DraggableMPTTAdmin
+from mptt.fields import TreeManyToManyField
 
 from My_EShop.eshop.models import Category, Product, Brand
 
@@ -11,6 +15,8 @@ from My_EShop.eshop.models import Category, Product, Brand
 @admin.register(Category)
 class CategoryAdmin(DraggableMPTTAdmin):
     mptt_indent_field = "title"
+    # specify pixel amount(levels of tree) for this ModelAdmin only:
+    mptt_level_indent = 20
     list_display = ('tree_actions', 'indented_title',
                     'related_products_count', 'related_products_cumulative_count')
     list_display_links = ('indented_title',)
@@ -46,7 +52,10 @@ class CategoryAdmin(DraggableMPTTAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'category']
+    # list_display = ['name', 'category']
+    formfield_overrides = {
+        TreeManyToManyField: {'widget': CheckboxSelectMultiple},
+    }
 
 
 @admin.register(Brand)

@@ -2,22 +2,22 @@
 {% load static %}
 
 {% block page_content %}
-    {% for cat in category %}
+{#    {% for cat in categories %}#}
     <section id="category-banner" class="my-5 py-5">
         <div class="container">
-            <h1>{{ cat.title}}</h1>
+            <h1>{{ category.title}}</h1>
             <h4 style="color: #3a3833">Explore our collection<br>and deals.</h4>
-            <button class="text-uppercase">Shop all {{ cat.title }}'s</button>
+            <button class="text-uppercase">Shop all {{ category.title }}'s</button>
         </div>
     </section>
      <section >
         <div>
             <h3 class="product-category "></h3>
-            <h3 class="text-center">Men Products</h3>
+            <h3 class="text-center">{{ category.title }} Products</h3>
             <hr class="mx-auto">
             <p class="text-center">Here you can check out our Men products</p>
         </div>
     </section>
-    {% endfor %}
+{#    {% endfor %}#}
 
 {% endblock %}
